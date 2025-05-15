@@ -1,0 +1,16 @@
+#root {
+  width: 100%;
+  /* max-width: 1440px; Limiting root width to 1440px */
+  height: 5817px;
+  top: -1283px; /* Offsets the container to match Figma */
+  left: 672px;  /* Offsets the container to match Figma */
+  background-color: #FFFFFF; /* White background */
+  display: flex;
+  flex-direction: column;
+  gap: 0; /* No gap between sections */
+  opacity: 1; /* Make sure the root container is visible */
+}
+
+.App {
+  margin-top: 46px;
+}
