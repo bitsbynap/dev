@@ -7,7 +7,7 @@ import logo5 from "../../../assets/clientlogo5.png";
 import logo6 from "../../../assets/clientlogo6.png";
 import logo7 from "../../../assets/clientlogo7.png";
 import logo8 from "../../../assets/clientlogo8.png";
-import logo9 from "../../../assets/clientlogo9.png";
+import logo9 from "../../../assets/clientlogo8.png";
 import logo10 from "../../../assets/clientlogo10.png";
 
 const StyledWrapperContainer = styled.div`
