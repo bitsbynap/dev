@@ -1,9 +1,18 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;800&family=DM+Sans:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sofia+Sans:wght@500&display=swap');
+
+/* @font-face {
+  font-family: 'Sofia Pro Medium';
+  src:url('');
+  src: url('../../assets/fonts/SofiaProMedium.ttf') format('truetype'); Adjust path as per your project structure
+  font-weight: 400;
+  font-style: normal;
+} */
 
 @font-face {
   font-family: 'Sofia Pro Medium';
-  src: url('../../assets/fonts/SofiaProMedium.ttf') format('truetype'); /* Adjust path as per your project structure */
+  src: local('Arial'), local('Helvetica');
   font-weight: 400;
   font-style: normal;
 }
