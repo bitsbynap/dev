@@ -7,8 +7,8 @@ import logo5 from "../../../assets/clientlogo5.png";
 import logo6 from "../../../assets/clientlogo6.png";
 import logo7 from "../../../assets/clientlogo7.png";
 import logo8 from "../../../assets/clientlogo8.png";
-import logo9 from "../../../assets/clientlogo8.png";
-import logo10 from "../../../assets/clientlogo8.png";
+// import logo9 from "../../../assets/clientlogo8.png";
+// import logo10 from "../../../assets/clientlogo8.png";
 
 const StyledWrapperContainer = styled.div`
   position: relative;
@@ -78,7 +78,7 @@ const Image = styled.img`
 `;
 
 function ClientLogoScroll() {
-  const logos = [logo1, logo2, logo3, logo4, logo5, logo6, logo7, logo8, logo9, logo10];
+  const logos = [logo1, logo2, logo3, logo4, logo5, logo6, logo7, logo8, ]; // logos are not present logo9, logo10];
 
   return (
     <StyledWrapperContainer>

@@ -268,20 +268,39 @@ const ContactUs = () => {
     e.preventDefault();
     emailjs
       .send(
-        "YOUR_SERVICE_ID", // Replace with your service ID
-        "YOUR_TEMPLATE_ID", // Replace with your template ID
+        "service_egsv68f", // Replace with your service ID
+        "template_p458lnf", // Replace with your template ID
         {
-          first_name: formData.firstName,
+          name: formData.firstName,
           last_name: formData.lastName,
           email: formData.email,
           phone: formData.phone,
           message: formData.message,
         },
-        "YOUR_PUBLIC_KEY" // Replace with your EmailJS public key
+        "qFQnmxp4t_P67O2NF" // Replace with your EmailJS public key
       )
       .then(
-        () => alert("Message Sent Successfully!"),
-        (error: { text: string; }) => alert("Failed to send message: " + error.text)
+        () => {
+          setFormData({
+          firstName: "",
+          lastName: "",
+          email: "",
+          phone: "",
+          message: "",
+        });
+          alert("Message Sent Successfully!")
+      },
+        (error: { text: string; }) =>{
+          setFormData({
+      firstName: "",
+      lastName: "",
+      email: "",
+      phone: "",
+      message: "",
+    });
+          alert("Failed to send message: " + error.text)
+  }
+
       );
   };
   return (
@@ -312,11 +331,11 @@ const ContactUs = () => {
           <form onSubmit={sendEmail}>
             <div className="form-group">
               <label htmlFor="first-name">First Name</label>
-              <input id="first-name" type="text" placeholder="John" onChange={handleChange}/>
+              <input id="first-name" type="text" name = "firstName" placeholder="John" onChange={handleChange} value={formData.firstName}/>
             </div>
             <div className="form-group">
               <label htmlFor="last-name">Last Name</label>
-              <input id="last-name" type="text" placeholder="Doe" onChange={handleChange}/>
+              <input id="last-name" type="text"  name = "lastName" placeholder="Doe" onChange={handleChange} value={formData.lastName}/>
             </div>
             <div className="form-group">
               <label htmlFor="email">Email</label>
@@ -325,15 +344,17 @@ const ContactUs = () => {
                 type="email"
                 placeholder="youremail@example.com"
                 onChange={handleChange}
+                name = "email"
+                value={formData.email}
               />
             </div>
             <div className="form-group">
               <label htmlFor="phone">Phone Number</label>
-              <input id="phone" type="tel" placeholder="+91 012 3456 789" onChange={handleChange}/>
+              <input id="phone" type="tel" name = "phone" placeholder="+91 012 3456 789" onChange={handleChange} value={formData.phone}/>
             </div>
             <div className="form-group" style={{ flex: "100%" }}>
               <label htmlFor="message">Message</label>
-              <textarea id="message" placeholder="Write your message..." onChange={handleChange}/>
+              <textarea id="message" name = "message" placeholder="Write your message..." onChange={handleChange} value={formData.message}/>
             </div>
             <StyledContactButton type="submit">
               <StyledContactUsText >Send Message</StyledContactUsText>{" "}
