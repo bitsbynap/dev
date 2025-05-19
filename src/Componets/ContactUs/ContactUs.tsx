@@ -263,6 +263,29 @@ const ContactUs = () => {
   const handleChange = (e: { target: { name: any; value: any; }; }) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
+  const sendToAdmin = () => {
+    emailjs
+      .send(
+        "service_egsv68f", // Replace with your service ID
+        "template_sgb056f", // Replace with your template ID
+        {
+          name: formData.firstName&& formData.firstName + " "+ formData.lastName?formData.lastName:" ",
+          mobile_number: formData.phone,
+          email: formData.email,
+          message: formData.message,
+        },
+        "qFQnmxp4t_P67O2NF" // Replace with your EmailJS public key
+      )
+      .then(
+        () => {
+          console.log("Message Sent Successfully!")
+      },
+        (error: { text: string; }) =>{
+          console.log("Failed to send message: " + error.text)
+  }
+
+      );
+  };
 
   const sendEmail = (e: { preventDefault: () => void; }) => {
     e.preventDefault();
@@ -281,6 +304,7 @@ const ContactUs = () => {
       )
       .then(
         () => {
+          sendToAdmin()
           setFormData({
           firstName: "",
           lastName: "",
