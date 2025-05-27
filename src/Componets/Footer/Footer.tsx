@@ -188,7 +188,8 @@ function FooterComponent() {
           <Link to="/" onClick={handleScrollToTop}>
             Home
           </Link>
-          <Link to="/about-us">About us</Link>
+          <span />
+          <Link to="/about-us" onClick={handleScrollToTop}>About us</Link>
         </FooterLinks>
       </FooterTop>
       <FooterBottom>
