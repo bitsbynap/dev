@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import logo from "../../assets/logo.png";
+import logo from "../../assets/NULogo.png";
 import { Link } from "react-router-dom";
 import { COLORS } from "../../constants";
 
@@ -188,7 +188,6 @@ function FooterComponent() {
           <Link to="/" onClick={handleScrollToTop}>
             Home
           </Link>
-          <span />
           <Link to="/about-us" onClick={handleScrollToTop}>About us</Link>
         </FooterLinks>
       </FooterTop>

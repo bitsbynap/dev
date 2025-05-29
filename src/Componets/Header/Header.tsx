@@ -1,5 +1,5 @@
 import styled, { keyframes } from "styled-components";
-import logo from "../../assets/logo.png";
+import logo from "../../assets/NULogo.png";
 import { Link } from "react-router-dom";
 import { COLORS } from "../../constants";
 // import { ReactComponent as Logo } from "../../assets/logoNuSkill.svg";
